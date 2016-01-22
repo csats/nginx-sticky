@@ -11,5 +11,5 @@ script:
   - docker build -t docker.io/csats/nginx-sticky .
 
 after_success:
-  - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+  - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
   - docker push docker.io/csats/nginx-sticky:latest
