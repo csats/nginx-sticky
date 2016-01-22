@@ -1,7 +1,7 @@
 
 .PHONY: nginx container push
 
-all: nginx container push
+all: nginx container
 
 nginx: .
 	docker run -it -v $(PWD):/host debian:jessie /host/build-nginx.sh
